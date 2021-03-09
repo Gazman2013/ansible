@@ -1,0 +1,57 @@
+Ansible controle
+apt install ansible
+adduser ansible
+echo 'ansible ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/ansible
+ssh-keygen
+hosts ip=dns
+ssh-copy-id user@dns
+
+    1  cd ~
+    2  ansible -m ping all
+    3  ansible --version
+    4  cd ~
+    5  touch ansible.cfg
+    6  ansible --version
+    7  mkdir ansibletest
+    8  cd ansibletest/
+    9  ansible --version
+   10  touch ansible.cfg
+   11  ansible --version
+   12  ansible -m user -a "name-alice" all
+   13  ls -la
+   14  rm ansible.cfg
+   15  cd ..
+   16  ls -la
+   17  ansible --version
+   18  rm ansible.cfg
+   19  ansible --version
+   20  ansible -m user -a "name-alice" all
+   21  ansible -m user -a "name=alice" all
+   22  ansible -m command -a "id alice" all
+   23  ansible -m user -a "name-alice state-abset" web
+   24  ansible -m user -a "name=alice state-abset" web
+   25  ansible -m user -a "name=alice state-absent" web
+   26  ansible -m user -a "name=alice state=absent" web
+   27  ansible -m command -a "id alice" all
+   28  ansible-doc user
+   29  ansible -m copy -a '"hello world!" dest=/etc/example'
+   30  ansible -m copy -a '"hello world!" dest=/etc/example' all
+   31  ansible -m copy -a '"hello world" dest=/etc/example' all
+   32  ansible-doc copy
+   33  ansible -m copy -a 'contetn="hello world" dest=/etc/example' all
+   34  ansible -m copy -a 'content="hello world" dest=/etc/example' all
+   35  ansible -m setup all
+
+root slave
+adduser asible 
+echo 'ansible ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/ansible
+ cd /etc/sudoers.d
+    2  ls -la
+    3  nano ansible
+    4  nano /etc/ssh/sshd_config
+    5  systemctl restart sshd
+    6  nano /etc/ssh/sshd_config
+    7  systemctl restart sshd
+    8  history
+
+                                                   
