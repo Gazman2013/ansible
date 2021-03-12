@@ -45,10 +45,10 @@ ansible-slave2 | CHANGED => {
     "shell": "/bin/sh",
     "state": "present",
     "uid": 1003
-    16. ansible  -m file -a "path=/home/student/test1 state=directory" all
-    17. ansible  -m file -a "path=/home/student/test1/test2 state=directory" all
-    18. ansible  -m file -a "path=/home/student/test1/test2/test3 state=directory" all
-    19. ansible all -m shell -a 'ifconfig'
+16. ansible  -m file -a "path=/home/student/test1 state=directory" all
+17. ansible  -m file -a "path=/home/student/test1/test2 state=directory" all
+18. ansible  -m file -a "path=/home/student/test1/test2/test3 state=directory" all
+19. ansible all -m shell -a "ifconfig"
 ansible-slave1 | CHANGED | rc=0 >>
 ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1460
         inet 10.128.0.27  netmask 255.255.255.255  broadcast 0.0.0.0
@@ -67,7 +67,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 4450  bytes 410217 (410.2 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-    20. ansible all -m setup -a 'filter=ansible_all_ipv4_addresses'
-    21. ansible all -m shell -a "cat /proc/cpuinfo" && ansible all -m shell -a "cat /proc/meminfo" && ansible all -m shell -a "cat /etc/issue" и так далее
-    22. ansible all -m setup -a 'gather_subset=hardware'
-    23. Про провайдера облака пока не придумал
+20. ansible all -m setup -a '"filter=ansible_all_ipv4_addresses"
+21. ansible all -m shell -a "cat /proc/cpuinfo" && ansible all -m shell -a "cat /proc/meminfo" && ansible all -m shell -a "cat /etc/issue" и так далее
+22. ansible all -m setup -a "gather_subset=hardware"
+23. Про провайдера облака пока не придумал
