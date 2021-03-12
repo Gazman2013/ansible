@@ -14,4 +14,37 @@ ansible-slave2
 12. ansible -m apt -a "name=nano state=latest" all
 13. ansible all -m group -a "name=students" 
 14. ansible -m user -a "name=student groups=students append=yes" all
-15. 
+15. ansible-slave1 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "append": false,
+    "changed": true,
+    "comment": "",
+    "group": 1005,
+    "home": "/home/student",
+    "move_home": false,
+    "name": "student",
+    "password": "NOT_LOGGING_PASSWORD",
+    "shell": "/bin/sh",
+    "state": "present",
+    "uid": 1003
+}
+ansible-slave2 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "append": false,
+    "changed": true,
+    "comment": "",
+    "group": 1005,
+    "home": "/home/student",
+    "move_home": false,
+    "name": "student",
+    "password": "NOT_LOGGING_PASSWORD",
+    "shell": "/bin/sh",
+    "state": "present",
+    "uid": 1003
+    16. ansible  -m file -a "path=/home/student/test1 state=directory" all
+    17. ansible  -m file -a "path=/home/student/test1/test2 state=directory" all
+    18. ansible  -m file -a "path=/home/student/test1/test2/test3 state=directory" all
