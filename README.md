@@ -70,4 +70,4 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
     20. ansible all -m setup -a 'filter=ansible_all_ipv4_addresses'
     21. ansible all -m shell -a "cat /proc/cpuinfo" && ansible all -m shell -a "cat /proc/meminfo" && ansible all -m shell -a "cat /etc/issue" и так далее
     22. ansible all -m setup -a 'gather_subset=hardware'
-    23. Про провайдера облака пока не придумал.
+    23. Про провайдера облака пока не придумал
