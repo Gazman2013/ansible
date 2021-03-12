@@ -67,7 +67,8 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 4450  bytes 410217 (410.2 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-20. ansible all -m setup -a '"filter=ansible_all_ipv4_addresses"
-21. ansible all -m shell -a "cat /proc/cpuinfo" && ansible all -m shell -a "cat /proc/meminfo" && ansible all -m shell -a "cat /etc/issue" и так далее
-22. ansible all -m setup -a "gather_subset=hardware"
-23. Про провайдера облака пока не придумал
+20. 
+21. ansible all -m setup -a '"filter=ansible_all_ipv4_addresses"
+22. ansible all -m shell -a "cat /proc/cpuinfo" && ansible all -m shell -a "cat /proc/meminfo" && ansible all -m shell -a "cat /etc/issue" и так далее
+23. ansible all -m setup -a "gather_subset=hardware"
+24. Про провайдера облака пока не придумал
